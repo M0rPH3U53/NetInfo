@@ -10,7 +10,7 @@ Récupère les info réseau local de l’hôte
 
 ```  
 ┌─[m0rph3u5@parrot]─[~]  
-└──╼ $sudo apt install net-tools 
+└──╼ $sudo apt install iproute2
 ```
 ## 👁️ Demo
 
