@@ -1,6 +1,6 @@
 # NetInfo
 
-Récupère les info réseau local de l’hôte
+Récupère les info du réseau local de l’hôte
 
 | Outils | URLs |  
 | --- | --- |  
@@ -16,7 +16,7 @@ Récupère les info réseau local de l’hôte
 
 ```
 ┌─[m0rph3u5@parrot]─[~/Scripts]
-└──╼ $sudo ./info-host.sh
+└──╼ $sudo ./NetInfo.sh
 
 _______________________________________________
 7     77     77      77  77     77     77     7
