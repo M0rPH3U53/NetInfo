@@ -1,6 +1,6 @@
 # NetInfo
 
-Récupère les info réseau de l’hôte
+Récupère les info réseau local de l’hôte
 
 | Outils | URLs |  
 | --- | --- |  
