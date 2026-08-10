@@ -26,6 +26,9 @@ JAUNE='\033[0;33m'
 # Affiche interfaces avec adresse réseaux
 interfaces=$(ip route | grep -E '[0-9]' | grep -v default | awk '{print $3 " --> " $1}')
 
+# Affiche les port ouvert avec leurs programmes
+ports=$(ss -lpnH -4 2>/dev/null | awk '{print $5 " --> " $7}')
+
 # Recupere l'ip de machine
 IP_hote=$(ip route | grep -E '[0-9]' | grep -v default | awk '{print $9}')
 
@@ -40,6 +43,10 @@ echo " "
 echo "${BLEU}[*]${RESET} ${BLANC}Interfaces ${RESET} "
 echo " "
 echo "${interfaces}"
+echo " "
+echo -e "${BLEU}[*]${RESET} ${BLANC}Ports ${RESET} "
+echo " "
+echo "${ports}"
 echo " "
 echo "${BLEU}[*]${RESET} ${BLANC}IP ${RESET} "
 echo " "
