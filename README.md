@@ -1,4 +1,5 @@
-# NetInfo
+# <img width="1536" height="1024" alt="Designer" src="https://github.com/user-attachments/assets/2755d2b4-ab1c-4f56-88fc-00a08c8146c7" />
+
 
 Récupère les info du réseau local de l’hôte
 
