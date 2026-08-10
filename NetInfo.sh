@@ -35,6 +35,7 @@ dns_serveur=$(cat /etc/resolv.conf | grep -v Generated | awk '{print $2}')
 # Rcupere ip  passerelle par defaut
 gateway_ip=$(ip route show default | awk '{print $3}')
 
+# Affiche les info reseau
 echo " "
 echo "${BLEU}[*]${RESET} ${BLANC}Interfaces ${RESET} "
 echo " "
