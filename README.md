@@ -4,7 +4,7 @@ Récupère les info réseau local de l’hôte
 
 | Outils | URLs |  
 | --- | --- |  
-| <span style="color: #dddddd;">🌐</span> net-tools | https://net-tools.sourceforge.io |
+| <span style="color: #dddddd;">🌐</span> iproute2 | https://fr.wikipedia.org/wiki/Iproute2 |
 
 ## 🛠️ Outils
 
