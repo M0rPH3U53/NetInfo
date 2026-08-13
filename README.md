@@ -6,12 +6,13 @@ Récupère les info du réseau local de l’hôte
 | Outils | URLs |  
 | --- | --- |  
 | <span style="color: #dddddd;">🌐</span> iproute2 | https://fr.wikipedia.org/wiki/Iproute2 |
+| <span style="color: #dddddd;">🌐</span> net-tools | https://net-tools.sourceforge.io |
 
 ## 🛠️ Outils
 
 ```  
 ┌─[m0rph3u5@parrot]─[~]  
-└──╼ $sudo apt install iproute2
+└──╼ $sudo apt install iproute2 net-tools
 ```
 ## 👁️ Demo
 
