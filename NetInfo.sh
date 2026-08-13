@@ -23,6 +23,9 @@ RESET='\033[0m'
 BLANC='\033[1;37m'
 JAUNE='\033[0;33m'
 
+# Nom d'hote
+hostename=$(hostname)
+
 # Affiche interfaces avec adresse réseaux
 interfaces=$(ip route | grep -E '[0-9]' | grep -v default | awk '{print $3 " --> " $1}')
 
@@ -30,7 +33,7 @@ interfaces=$(ip route | grep -E '[0-9]' | grep -v default | awk '{print $3 " -->
 ports=$(ss -lpnH -4 2>/dev/null | awk '{print $5 " --> " $7}')
 
 # Recupere l'ip de machine
-IP_hote=$(ip route | grep -E '[0-9]' | grep -v default | awk '{print $9}')
+IP_hote=$(hostname -I)
 
 # Recupere l'adresse du serveur dns
 dns_serveur=$(cat /etc/resolv.conf | grep -v "#" | awk '{print $2}')
@@ -39,12 +42,15 @@ dns_serveur=$(cat /etc/resolv.conf | grep -v "#" | awk '{print $2}')
 gateway_ip=$(ip route show default | awk '{print $3}')
 
 # Affiche les info reseau
+echo "${BLEU}[*]${RESET} ${BLANC}Nom d'hote ${RESET} "
+echo " "
+echo "${hostename}"
 echo " "
 echo "${BLEU}[*]${RESET} ${BLANC}Interfaces ${RESET} "
 echo " "
 echo "${interfaces}"
 echo " "
-echo -e "${BLEU}[*]${RESET} ${BLANC}Ports ${RESET} "
+echo "${BLEU}[*]${RESET} ${BLANC}Ports ${RESET} "
 echo " "
 echo "${ports}"
 echo " "
