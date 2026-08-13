@@ -26,7 +26,7 @@ JAUNE='\033[0;33m'
 # Nom d'hote
 hostename=$(hostname)
 
-# Affiche interfaces avec adresse réseaux
+# Interfaces réseau
 interfaces=$(ip route | grep -E '[0-9]' | grep -v default | awk '{print $3 " --> " $1}')
 
 # Broadcast
@@ -44,7 +44,7 @@ dns_serveur=$(cat /etc/resolv.conf | grep -v "#" | awk '{print $2}')
 # Passerelle par defaut
 gateway_ip=$(ip route show default | awk '{print $3}')
 
-# Affiche les info reseau
+# Affiche les infos réseaux
 echo "${BLEU}[*]${RESET} ${BLANC}Hostname ${RESET} "
 echo " "
 echo "${hostename}"
