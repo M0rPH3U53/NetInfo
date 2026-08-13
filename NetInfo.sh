@@ -33,7 +33,7 @@ ports=$(ss -lpnH -4 2>/dev/null | awk '{print $5 " --> " $7}')
 IP_hote=$(ip route | grep -E '[0-9]' | grep -v default | awk '{print $9}')
 
 # Recupere l'adresse du serveur dns
-dns_serveur=$(cat /etc/resolv.conf | grep -v Generated | awk '{print $2}')
+dns_serveur=$(cat /etc/resolv.conf | grep -v "#" | awk '{print $2}')
 
 # Rcupere ip  passerelle par defaut
 gateway_ip=$(ip route show default | awk '{print $3}')
