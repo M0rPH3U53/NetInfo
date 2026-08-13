@@ -29,26 +29,33 @@ hostename=$(hostname)
 # Affiche interfaces avec adresse réseaux
 interfaces=$(ip route | grep -E '[0-9]' | grep -v default | awk '{print $3 " --> " $1}')
 
-# Affiche les port ouvert avec leurs programmes
+# Broadcast
+broadcast=$(ifconfig | grep inet | grep -v inet6 | awk '{print $2 " --> " $6}')
+
+# Ports ouvert
 ports=$(ss -lpnH -4 2>/dev/null | awk '{print $5 " --> " $7}')
 
-# Recupere l'ip de machine
+# IP machine
 IP_hote=$(hostname -I)
 
-# Recupere l'adresse du serveur dns
+# Serveur DNS
 dns_serveur=$(cat /etc/resolv.conf | grep -v "#" | awk '{print $2}')
 
-# Rcupere ip  passerelle par defaut
+# Passerelle par defaut
 gateway_ip=$(ip route show default | awk '{print $3}')
 
 # Affiche les info reseau
-echo "${BLEU}[*]${RESET} ${BLANC}Nom d'hote ${RESET} "
+echo "${BLEU}[*]${RESET} ${BLANC}Hostname ${RESET} "
 echo " "
 echo "${hostename}"
 echo " "
 echo "${BLEU}[*]${RESET} ${BLANC}Interfaces ${RESET} "
 echo " "
 echo "${interfaces}"
+echo " "
+echo "${BLEU}[*]${RESET} ${BLANC}Broadcast ${RESET} "
+echo " "
+echo "${broadcast}"
 echo " "
 echo "${BLEU}[*]${RESET} ${BLANC}Ports ${RESET} "
 echo " "
