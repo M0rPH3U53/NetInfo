@@ -27,7 +27,7 @@ JAUNE='\033[0;33m'
 hostename=$(hostname)
 
 # Interfaces réseau
-interfaces=$(ip route | grep -E '[0-9]' | grep -v default | awk '{print $3 " --> " $1}')
+interfaces=$(ip route | grep -v default | awk '{print $3 " --> " $1}')
 
 # Broadcast
 broadcast=$(ifconfig | grep inet | grep -v inet6 | grep -v  "inet 127.0.0.1" | awk '{print $2 " --> " $6}')
