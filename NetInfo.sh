@@ -36,7 +36,7 @@ broadcast=$(ifconfig | grep inet | grep -Ev  "inet6|127.0.0.1" | awk '{print $2 
 ports=$(ss -lpnH -4 2>/dev/null | awk '{print $5 " --> " $7}')
 
 # IP machine
-IP_hote=$(hostname -I)
+IP_hote=$(hostname -I | xargs -n1)
 
 # Serveur DNS
 dns_serveur=$(cat /etc/resolv.conf | grep -v "#" | awk '{print $2}')
