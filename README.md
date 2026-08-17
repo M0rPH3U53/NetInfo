@@ -45,13 +45,13 @@ enp0s3 --> 192.168.56.0/24
 
 [*] Ports  
  
-0.0.0.0:38053 --> users:(("avahi-daemon",pid=731,fd=14))
-0.0.0.0:5353 --> users:(("avahi-daemon",pid=731,fd=12))
-10.0.3.15:123 --> users:(("ntpd",pid=1069,fd=22))
-192.168.56.149:123 --> users:(("ntpd",pid=1069,fd=21))
-127.0.0.1:123 --> users:(("ntpd",pid=1069,fd=18))
-0.0.0.0:123 --> users:(("ntpd",pid=1069,fd=17))
-0.0.0.0:22 --> users:(("sshd",pid=1064,fd=6))
+udp:0.0.0.0:51875 --> users:(("avahi-daemon",pid=733,fd=14))
+udp:0.0.0.0:5353 --> users:(("avahi-daemon",pid=733,fd=12))
+udp:10.0.3.15:123 --> users:(("ntpd",pid=1011,fd=22))
+udp:192.168.56.149:123 --> users:(("ntpd",pid=1011,fd=21))
+udp:127.0.0.1:123 --> users:(("ntpd",pid=1011,fd=18))
+udp:0.0.0.0:123 --> users:(("ntpd",pid=1011,fd=17))
+tcp:0.0.0.0:22 --> users:(("sshd",pid=1032,fd=6))
  
 [*] IP  
  
