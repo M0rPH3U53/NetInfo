@@ -8,7 +8,7 @@ Récupère les info du réseau local de l’hôte
 | <span style="color: #dddddd;">🌐</span> iproute2 | https://fr.wikipedia.org/wiki/Iproute2 |
 | <span style="color: #dddddd;">⚙️</span> net-tools | https://net-tools.sourceforge.io |
 
-## 🛠️ Outils
+## 🚀 Installation
 
 ```  
 ┌─[m0rph3u5@parrot]─[~]  
